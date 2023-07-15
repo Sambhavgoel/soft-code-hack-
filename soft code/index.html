@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- ............................................................................. -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!-- ................................................................................ -->
+    <section id="home">
+        <div class="main1">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">LOGO</h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#card">ABOUT</a></li>
+                        <li><a href="#section-form">LOGIN</a></li>
+                        <li><a href="#map">MAP</a></li>
+                        <li><a href="#conc">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <h1><span>YOU</span>
+                    <span> HAVE</span>
+                    <span> A</span>
+                    <span>VISION</span>
+                    <span> WE</span>
+                    <span>HAVE </span>
+                    <span>A </span>
+                    <span>PLATFORM </span>
+                    <span>TO</span>
+                    <span> GET</span>
+                    <span>YOU </span>
+                    <span>THERE</span>
+                </h1>
+               
+                <p class="par">we provide a interactive interface between buyer and seller </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section id="card">
+        <div class="dir">
+            <div class="container">
+                <img src="download (2).jpg" alt="">
+                <img src="download.jpg" alt="">
+                <img src="images.jpg" alt="">
+                <img src="medicine.jpg" alt="">
+              </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="section-form">
+
+
+        <div class="container_form">
+            <form action="" name="myform" id="myform" method="post">
+            <h1 class="heading">SIGN IN</h1>
+            <div class="main">
+            <p>FIRST NAME</p>
+            <input type="text"  name="FirstName" placeholder="first name">
+            <p>LAST NAME</p>
+            <input type="text"  name="LastName" placeholder="last name">
+             <p>CONTACT NUMBER</p>
+            <input type="number" name="MobileNumber" placeholder="enter your number">
+            <p>E MAIL</p>
+            <input type="email" name="Email" placeholder="enter your email">
+           
+            <p>CITY</p>
+            <input type="text" name="city"  placeholder="enter your city">
+            <p>DATE OF BIRTH(DOB)</p>
+            <input type="date" name="DOB" placeholder="Date of Birth">
+            <br>
+            <input type="submit" id="submit" value="Submit">
+            </div>
+            </form>
+        </div>
+    
+
+    </section>
+
+    <section id="map">
+        <iframe class="if" width="100%" height="500" src="https://apidocs.geoapify.com/playground/places/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+
+
+        <div id="conc" class="section4">
+            <div class="heading">
+                <h1>CONNECT WITH US </h1>
+            </div>
+            <section id="contact2">
+                
+                <div class="box1">
+                    <h2>SAMBHAV GOEL</h2><br>
+                    
+                    <div class="contain1">
+                        
+                   
+                    <a href="https://www.linkedin.com/in/sambhav-goel-5297771ba"><img src="linkedi2.png"></a>
+                    <a href="https://instagram.com/sambhav6248?igshid=MzNlNGNkZWQ4Mg=="><img src="insta.jpg"></a>
+                    <a href="https://github.com/Sambhavgoel"><img src="github.png"></a>
+                    </div>
+        
+        
+                </div>
+                <div class="box2">
+                    <h2>SAMANT SAINI</h2><br>
+                    <div class="contain2">
+                        
+                        
+                    <a href="https://www.linkedin.com/in/samant-saini-682713232"><img src="linkedi2.png"></a>
+                    <a href="https://instagram.com/samant_saini_?igshid=ZDdkNTZiNTM="><img src="insta.jpg"></a>
+                    <a href="https://github.com/Samantsaini"><img src="github.png"></a>
+                    </div>
+        
+                </div>
+        
+        
+        
+            </section>
+            </div>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwyX5d6orvbntbwSN18LlDIl2uLy0ExBFUqxMWy7tP7IZLzm6amoFk4bn7VpuJfH8ki/exec'
+                const form = document.forms['myform']
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => alert("Thank you! your form is submitted successfully." ))
+                    .then(() => {  window.location.reload(); })
+                    .catch(error => console.error('Error!', error.message))
+                })
+
+
+                // ........................................................................................................................
+                // Get the button
+                let mybutton = document.getElementById("myBtn");
+                
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                  } else {
+                    mybutton.style.display = "none";
+                  }
+                }
+                
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
+          
+              </script>
+</body>
+</html>
